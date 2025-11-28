@@ -1,5 +1,6 @@
 // Resume builder - live preview + export to PDF (print) + JSON save
-import templateHtml from '../templates/template.html?raw'; // This line is for bundlers; fallback used below
+import templateHtml from ../templates/template.html?raw; 
+  // This line is for bundlers; fallback used below
 
 // Because we might not run a bundler here, we'll fetch the template instead:
 async function getTemplate(){
