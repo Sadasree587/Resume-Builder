@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ResumeCraft — Resume Builder</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ResumeCraft</h1>
+      <div class="actions">
+        <button id="saveJson">Save JSON</button>
+        <button id="printBtn">Export to PDF</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <form id="resumeForm" class="form">
+        <section>
+          <h2>Personal</h2>
+          <input name="name" placeholder="Full name" required />
+          <input name="title" placeholder="Job title (e.g. Frontend Developer)" />
+          <input name="email" placeholder="Email" />
+          <input name="phone" placeholder="Phone" />
+          <input name="location" placeholder="City, Country" />
+        </section>
+
+        <section>
+          <h2>Summary</h2>
+          <textarea name="summary" rows="4" placeholder="Short professional summary"></textarea>
+        </section>
+
+        <section id="expSection">
+          <h2>Experience</h2>
+          <div id="exps"></div>
+          <button type="button" id="addExp">+ Add Experience</button>
+        </section>
+
+        <section id="eduSection">
+          <h2>Education</h2>
+          <div id="edus"></div>
+          <button type="button" id="addEdu">+ Add Education</button>
+        </section>
+
+        <section>
+          <h2>Skills (comma separated)</h2>
+          <input name="skills" placeholder="e.g. JavaScript, React, CSS" />
+        </section>
+
+      </form>
+
+      <aside class="preview">
+        <div class="previewInner" id="previewArea"></div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
